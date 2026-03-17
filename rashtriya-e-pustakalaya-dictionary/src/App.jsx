@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter basename="/rashtriya-e-pustakalaya-dictionary">
+    <BrowserRouter basename="/rashtriya-e-pustakalaya">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

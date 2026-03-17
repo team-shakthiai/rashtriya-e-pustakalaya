@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  base: '/rashtriya-e-pustakalaya-dictionary/',
+  base: '/rashtriya-e-pustakalaya/',
   plugins: [react()],
   resolve: {
     alias: {
