@@ -1,0 +1,102 @@
+/* Rashtriya e-Pustakalaya - Design tokens matching reference */
+:root {
+  /* Primary teal / dark blue - nav, sections, buttons, footer (#036280) */
+  --color-primary: #036280;
+  --color-primary-dark: #024d60;
+  /* Lighter teal - top strip, accents */
+  --color-teal-light: #5a9fb5;
+  --color-teal-pale: #9ec9d6;
+  /* Backgrounds */
+  --color-card-bg: #ffffff;
+  --color-content-bg: #F8F8F8;
+  --color-banner-bg: #FFFDF5;
+  --color-strip-bg: #F8F8F8;
+  --color-publisher-strip: #ebe8e0;
+  /* Header / Navbar */
+  --color-header-bg: #036280;
+  --color-header-dark: #024d60;
+  --color-utility-bar: #5a9fb5;
+  /* Footer */
+  --color-footer-bg: #036280;
+  --color-footer-dark: #024d60;
+  /* Text */
+  --color-text: #333333;
+  --color-text-muted: #616161;
+  --color-heading: #333333;
+  /* Buttons & links */
+  --color-accent: #036280;
+  --color-accent-light: #5a9fb5;
+  --color-btn-primary: #036280;
+  --color-btn-viewall: #5a9fb5;
+  --color-link: #036280;
+  --color-rating: #ff9800;
+  --color-border: #e0e0e0;
+  /* Dotted pattern for reader */
+  --dotted-bg: radial-gradient(circle, #bdbdbd 1px, transparent 1px);
+  --dotted-bg-size: 16px 16px;
+  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', 'Source Sans 3', sans-serif;
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --radius: 8px;
+  --radius-btn: 6px;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --color-card-bg: #1a1a1a;
+  --color-content-bg: #252525;
+  --color-banner-bg: #252525;
+  --color-strip-bg: #252525;
+  --color-publisher-strip: #2d2d2d;
+  --color-text: #e8e8e8;
+  --color-text-muted: #b0b0b0;
+  --color-heading: #f0f0f0;
+  --color-border: #404040;
+  --color-link: #5a9fb5;
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Accessibility: font-size scaling */
+body.font-size-large { font-size: 112.5%; }
+body.font-size-small { font-size: 87.5%; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 100%;
+  color: var(--color-text);
+  background: var(--color-card-bg);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  margin: 0 0 0.5em;
+}
+
+.hindi, .devanagari {
+  font-family: var(--font-devanagari);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

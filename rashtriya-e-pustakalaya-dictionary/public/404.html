@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      var base = '/rashtriya-e-pustakalaya-dictionary/';
+      var path = location.pathname;
+      if (path.indexOf(base.replace(/\/$/, '')) === 0) {
+        path = path.slice(base.length - 1) || '/';
+      } else {
+        path = '/';
+      }
+      location.replace(base + (path === '/' ? '' : path.slice(1)) + location.search + location.hash);
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0;url=/rashtriya-e-pustakalaya-dictionary/" />
+</head>
+<body>
+  <p>Redirecting to <a href="/rashtriya-e-pustakalaya-dictionary/">Rashtriya e-Pustakalaya</a>...</p>
+</body>
+</html>

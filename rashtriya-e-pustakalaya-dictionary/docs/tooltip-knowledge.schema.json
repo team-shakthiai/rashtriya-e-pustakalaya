@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/tooltip-knowledge.json",
+  "title": "Tooltip Knowledge Database",
+  "description": "Multilingual concept entries for the Tooltip Knowledge Agent. Root keys are concept keys (e.g. word); values are objects keyed by language code (en, hi, bn, ta, te, mr).",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/definitions/MultilingualConcept"
+  },
+  "definitions": {
+    "MultilingualConcept": {
+      "type": "object",
+      "description": "One concept in up to 6 languages. Each key is a language code.",
+      "properties": {
+        "en": { "$ref": "#/definitions/ConceptEntry" },
+        "hi": { "$ref": "#/definitions/ConceptEntry" },
+        "bn": { "$ref": "#/definitions/ConceptEntry" },
+        "ta": { "$ref": "#/definitions/ConceptEntry" },
+        "te": { "$ref": "#/definitions/ConceptEntry" },
+        "mr": { "$ref": "#/definitions/ConceptEntry" }
+      },
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "ConceptEntry": {
+      "type": "object",
+      "description": "Concept content for one language",
+      "required": ["definition", "contextual_explanation"],
+      "properties": {
+        "definition": {
+          "type": "string",
+          "description": "Short dictionary-style definition"
+        },
+        "contextual_explanation": {
+          "type": "string",
+          "description": "Short explanation of the word in context"
+        },
+        "detailed_explanation": {
+          "type": "string",
+          "description": "Longer conceptual explanation for Expanded Panel"
+        },
+        "example": {
+          "type": "string",
+          "description": "Example sentence or real-world usage"
+        },
+        "related_concepts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of related terms"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "tooltip-agent",
+  "version": "1.0.0",
+  "description": "Modular tooltip knowledge agent for digital readers. Hover-based lookups from a multilingual JSON knowledge store.",
+  "type": "module",
+  "main": "./dist/tooltip-agent.cjs",
+  "module": "./dist/tooltip-agent.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tooltip-agent.js",
+      "require": "./dist/tooltip-agent.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^5.1.0",
+    "@vitejs/plugin-react": "^4.2.1"
+  },
+  "keywords": [
+    "tooltip",
+    "reader",
+    "dictionary",
+    "ebook",
+    "knowledge"
+  ],
+  "license": "MIT"
+}
